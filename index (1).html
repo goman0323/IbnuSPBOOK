@@ -1,68 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sportsbook Tools</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulator Sportsbook</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background-color: #fff;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
-    img.profile {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+
+    img {
+      width: 160px;
+      height: 160px;
       object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #00ffcc;
       margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ffcc;
     }
+
     h1 {
       font-size: 24px;
-      margin-bottom: 10px;
+      color: #ffffff;
     }
-    p {
-      font-size: 16px;
-      color: #555;
-    }
-    .btn {
-      display: block;
-      margin: 15px auto;
-      padding: 15px 25px;
-      background-color: #007bff;
-      color: white;
-      border: none;
+
+    .card {
+      background: #1f1f1f;
       border-radius: 12px;
-      font-size: 16px;
-      text-decoration: none;
-      width: 80%;
-      max-width: 400px;
-      transition: background-color 0.3s;
+      padding: 20px;
+      margin: 15px 0;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .btn:hover {
-      background-color: #0056b3;
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    }
+
+    a {
+      text-decoration: none;
+      color: #00ffc8;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.postimg.cc/3RJM2mPV/wdwdwdwdw.jpg" alt="Foto Profil" class="profile">
-    <h1>Hallo, selamat datang kawan!</h1>
-    <p>Silahkan klik apa yang kamu butuhkan:</p>
+  <img src="https://i.postimg.cc/3RJM2mPV/wdwdwdwdw.jpg" alt="Foto Kamu">
+  <h1>Hallo, selamat datang kawan</h1>
 
-    <a href="./cashout.html" class="btn">HITUNGAN CASHOUT</a>
-    <a href="./parlay.html" class="btn">KALKULATOR PARLAY</a>
-    <a href="./panduan.html" class="btn">PANDUAN PERMAINAN SPORTBOOK</a>
+  <div class="card">
+    <a href="cashout.html">➤ Hitungan Cashout</a>
+  </div>
+  <div class="card">
+    <a href="parlay.html">➤ Kalkulator Parlay</a>
+  </div>
+  <div class="card">
+    <a href="panduan.html">➤ Panduan Permainan Sportsbook</a>
   </div>
 </body>
 </html>
