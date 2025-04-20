@@ -15,7 +15,7 @@ Masukkan modal taruhan, odds parlay total, dan odds yang sudah menang, lalu klik
 Kalkulator untuk menghitung total odds parlay berdasarkan hasil taruhan yang kamu pilih.  
 Masukkan modal taruhan dan odds untuk setiap leg yang kamu pilih, lalu klik **"Hitung Parlay"** untuk mengetahui total odds dan kemenangan bersih.
 
-## 📖 [PANDUAN PERMAINAN SPORTBOOK](./panduan.html)
+## 📖 [PANDUAN PERMAINAN SPORTBOOK](./panduan-sportsbook.html)
 
 Halaman ini berisi penjelasan dasar tentang permainan sportsbook, bagaimana cara bermain, dan tips untuk memulai taruhan dengan bijak.
 
