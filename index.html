@@ -28,9 +28,12 @@
       box-shadow: 0 0 10px #00ffcc;
     }
 
-    h1 {
+    #typedText {
       font-size: 24px;
       color: #ffffff;
+      text-align: center;
+      white-space: pre-wrap;
+      min-height: 30px;
     }
 
     .card {
@@ -41,12 +44,12 @@
       width: 100%;
       max-width: 500px;
       box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
     }
 
     a {
@@ -72,11 +75,11 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+      z-index: 999;
     }
 
-    /* Warna tombol tutup */
     #myModal button {
-      background-color: #ff5733; /* Merah menyala */
+      background-color: #ff5733;
       color: #fff;
       padding: 10px;
       border: none;
@@ -85,18 +88,17 @@
     }
 
     #myModal button:hover {
-      background-color: #ff2a00; /* Merah lebih gelap */
+      background-color: #ff2a00;
     }
 
-    /* Warna sapaannya */
     #myModal h2 {
-      color: #ffcc00; /* Emas */
+      color: #ffcc00;
     }
   </style>
 </head>
 <body>
   <img src="https://i.postimg.cc/3RJM2mPV/wdwdwdwdw.jpg" alt="Foto Kamu">
-  <h1>Hallo, selamat datang kawan</h1>
+  <h1 id="typedText"></h1>
 
   <div class="card">
     <a href="cashout.html">➤ Hitungan Cashout</a>
@@ -116,10 +118,40 @@
   </div>
 
   <script>
-    // Menampilkan modal setelah 0,5 detik
+    // Efek Ketik Berulang
+    const text = "Hallo, selamat datang kawan";
+    const typedText = document.getElementById("typedText");
+    let i = 0;
+    let deleting = false;
+
+    function typeWriter() {
+      if (!deleting) {
+        if (i < text.length) {
+          typedText.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100); // Delay antar karakter saat mengetik
+        } else {
+          deleting = true;
+          setTimeout(typeWriter, 1000); // Tunggu sebentar sebelum menghapus
+        }
+      } else {
+        if (i > 0) {
+          typedText.textContent = text.substring(0, i - 1);
+          i--;
+          setTimeout(typeWriter, 50); // Delay antar karakter saat menghapus
+        } else {
+          deleting = false;
+          setTimeout(typeWriter, 1000); // Tunggu sebentar sebelum mengetik lagi
+        }
+      }
+    }
+
+    typeWriter();
+
+    // Modal delay tampil
     setTimeout(function() {
       document.getElementById("myModal").style.display = "block";
-    }, 500); // Waktu delay 500ms = 0,5 detik
+    }, 500);
 
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
