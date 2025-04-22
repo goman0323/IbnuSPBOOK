@@ -6,7 +6,7 @@
   <title>IBNUSPB</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-<style>
+  <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -59,6 +59,39 @@
     a:hover {
       color: #ffffff;
     }
+
+    /* Modal Popup */
+    #myModal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    }
+
+    /* Warna tombol tutup */
+    #myModal button {
+      background-color: #ff5733; /* Merah menyala */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #myModal button:hover {
+      background-color: #ff2a00; /* Merah lebih gelap */
+    }
+
+    /* Warna sapaannya */
+    #myModal h2 {
+      color: #ffcc00; /* Emas */
+    }
   </style>
 </head>
 <body>
@@ -74,5 +107,23 @@
   <div class="card">
     <a href="panduan.html">➤ Panduan Permainan Sportsbook</a>
   </div>
+
+  <!-- Modal Popup -->
+  <div id="myModal">
+    <h2>Selamat datang di IBNUSPORTBOOK!</h2>
+    <p>Semoga harimu menyenangkan, Ya Wak! 🎉</p>
+    <button onclick="closeModal()">Tutup</button>
+  </div>
+
+  <script>
+    // Menampilkan modal setelah 0,5 detik
+    setTimeout(function() {
+      document.getElementById("myModal").style.display = "block";
+    }, 500); // Waktu delay 500ms = 0,5 detik
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
