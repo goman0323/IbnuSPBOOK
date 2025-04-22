@@ -6,38 +6,88 @@
   <title>Kalkulator Parlay</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f7f7f7;
-    }
-    .container {
-      background: white;
-      max-width: 700px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    input, select, button {
-      padding: 10px;
-      margin: 10px 0;
-      width: 100%;
-      font-size: 16px;
-    }
-    button {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    .result {
-      margin-top: 20px;
-      font-weight: bold;
-    }
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .container {
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+
+  h2 {
+    color: #00ffc8;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #b0f4e6;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #2c2c2c;
+    color: #00ffc8;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  input[type="number"]:focus {
+    border-color: #00ffc8;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    outline: none;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: linear-gradient(90deg, #00ffc8, #00caa5);
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  button:hover {
+    transform: scale(1.02);
+    background: linear-gradient(90deg, #00d1ab, #00ffc8);
+  }
+
+  .result {
+    margin-top: 30px;
+    padding: 18px;
+    background-color: #181818;
+    border-left: 5px solid #00ffc8;
+    color: #00ffc8;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+  }
   </style>
 </head>
 <body>
