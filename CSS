@@ -1,0 +1,87 @@
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #00ffcc;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    #typedText {
+      font-size: 24px;
+      color: #ffffff;
+      text-align: center;
+      white-space: pre-wrap;
+      min-height: 30px;
+    }
+
+    .card {
+      background: #1f1f1f;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+    }
+
+    a {
+      text-decoration: none;
+      color: #00ffc8;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    /* Modal Popup */
+    #myModal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+      z-index: 999;
+    }
+
+    #myModal button {
+      background-color: #ff5733;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #myModal button:hover {
+      background-color: #ff2a00;
+    }
+
+    #myModal h2 {
+      color: #ffcc00;
+    }
