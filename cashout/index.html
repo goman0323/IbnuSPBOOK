@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Cashout</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.container {
+  background: #1f1f1f;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+
+input {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+button {
+  background-color: #00ffc8;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #00caa5;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #00ffc8;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Simulasi Cashout</h2>
+    <label>Modal Taruhan:</label>
+    <input type="number" id="stake" placeholder="Contoh: 100000">
+
+    <label>Odds Parlay Total:</label>
+    <input type="number" step="0.01" id="totalOdds" placeholder="Contoh: 10.20">
+
+    <label>Odds Yang Sudah Menang:</label>
+    <input type="number" step="0.01" id="doneOdds" placeholder="Contoh: 3.52">
+
+    <button onclick="hitungCashout()">Hitung Cashout</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function hitungCashout() {
+      const stake = parseFloat(document.getElementById("stake").value);
+      const totalOdds = parseFloat(document.getElementById("totalOdds").value);
+      const doneOdds = parseFloat(document.getElementById("doneOdds").value);
+
+      if (!stake || !totalOdds || !doneOdds) {
+        document.getElementById("result").innerText = "Mohon isi semua input dengan benar.";
+        return;
+      }
+
+      const impliedProb = 1 / totalOdds;
+      const currentProb = 1 / doneOdds;
+      const cashout = stake * currentProb / impliedProb;
+
+      document.getElementById("result").innerText = `Perkiraan nilai cashout: Rp ${cashout.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
