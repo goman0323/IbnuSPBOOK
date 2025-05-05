@@ -1,5 +1,3 @@
-  <script>
-    // Efek Ketik Berulang
     const text = "Hallo, selamat datang kawan";
     const typedText = document.getElementById("typedText");
     let i = 0;
@@ -37,4 +35,3 @@
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
-  </script>
