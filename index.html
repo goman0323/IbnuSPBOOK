@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IBNUSPB</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"> <!-- Ini sudah benar -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <!-- Perbaikan di sini, file CSS tidak perlu dimasukkan ke dalam tag <style> -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,53 +21,14 @@
   <div class="card">
     <a href="panduan.html">➤ Panduan Permainan Sportsbook</a>
   </div>
-
-  <!-- Modal Popup -->
+ 
   <div id="myModal">
     <h2>Selamat datang di IBNUSPORTBOOK!</h2>
     <p>Semoga harimu menyenangkan, Ya Wak! 🎉</p>
     <button onclick="closeModal()">Tutup</button>
   </div>
 
-  <script>
-    // Efek Ketik Berulang
-    const text = "Hallo, selamat datang kawan";
-    const typedText = document.getElementById("typedText");
-    let i = 0;
-    let deleting = false;
+<script src="js/script.js"></script>
 
-    function typeWriter() {
-      if (!deleting) {
-        if (i < text.length) {
-          typedText.textContent += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100); // Delay antar karakter saat mengetik
-        } else {
-          deleting = true;
-          setTimeout(typeWriter, 1000); // Tunggu sebentar sebelum menghapus
-        }
-      } else {
-        if (i > 0) {
-          typedText.textContent = text.substring(0, i - 1);
-          i--;
-          setTimeout(typeWriter, 50); // Delay antar karakter saat menghapus
-        } else {
-          deleting = false;
-          setTimeout(typeWriter, 1000); // Tunggu sebentar sebelum mengetik lagi
-        }
-      }
-    }
-
-    typeWriter();
-
-    // Modal delay tampil
-    setTimeout(function() {
-      document.getElementById("myModal").style.display = "block";
-    }, 500);
-
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-  </script>
 </body>
 </html>
