@@ -1,4 +1,4 @@
-    const text = "Hallo, selamat datang kawan";
+    const text = "Apa yang di butuhkan, pake aja ya wak";
     const typedText = document.getElementById("typedText");
     let i = 0;
     let deleting = false;
