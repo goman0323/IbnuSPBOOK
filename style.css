@@ -13,15 +13,16 @@ body {
   padding: 30px;
  }
 
-    img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #00ffcc;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px #00ffcc;
-    }
+img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center top; /* fokus ke bagian atas gambar */
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00ffcc;
+}
 
     #typedText {
       font-size: 24px;
