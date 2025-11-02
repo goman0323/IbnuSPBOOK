@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TOOLS SPORTBOOK</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BELAJAR SPORTBOOK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="https://i.imghippo.com/files/bzv8393c.jpg" alt="Foto Kamu">
-  <h1 id="typedText"></h1>
 
-  <div class="card">
-    <a href="cashout/">➤ Hitungan Cashout</a>
+  <header>
+    <img src="https://i.imghippo.com/files/bzv8393c.jpg" alt="Foto Kamu">
+    <h1>SPORTBOOK TOOLS</h1>
+    <div id="typedText"></div>
+  </header>
+
+  <div class="divider"></div>
+
+  <div class="tools">
+    <div class="card" onclick="window.location='cashout/'">
+      <a>Hitungan Cashout</a> <span>➤</span>
+    </div>
+    <div class="card" onclick="window.location='parlay/'">
+      <a>Kalkulator Parlay</a> <span>➤</span>
+    </div>
+    <div class="card" onclick="window.location='panduan/'">
+      <a>Panduan Permainan</a> <span>➤</span>
+    </div>
   </div>
-  <div class="card">
-    <a href="parlay/">➤ Kalkulator Parlay</a>
-  </div>
-  <div class="card">
-    <a href="panduan/">➤ Panduan Permainan Sportsbook</a>
-  </div>
- 
+
+  <footer>© 2025 SPORTBOOK TOOLS</footer>
+
+  <!-- Modal -->
   <div id="myModal">
-    <h2>Selamat datang di IBNUSPORTBOOK!</h2>
-    <p>Semoga harimu menyenangkan 🎉</p>
+    <h2>Selamat Datang kawan</h2>
+    <p>SEMOGA HARIMU MENYENANGKAN ✨</p>
     <button onclick="closeModal()">Tutup</button>
   </div>
 
-<script src="script.js"></script>
+ <script src="script.js"></script>
 
 </body>
 </html>
-
-
-
